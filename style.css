@@ -2,17 +2,23 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Comic Sans MS', cursive, sans-serif;
-  background: linear-gradient(to bottom, #b0e0e6, #f3e5f5);
+  background: linear-gradient(to bottom right, #add8e6, #f8c8dc);
   overflow-x: hidden;
 }
 
-.page {
+.book {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
   height: 100vh;
-  padding: 20px;
+}
+
+.page {
+  scroll-snap-align: start;
+  height: 100vh;
+  padding: 40px;
   box-sizing: border-box;
-  color: #333;
-  position: relative;
   text-align: center;
+  position: relative;
 }
 
 h1, h2 {
@@ -23,32 +29,22 @@ h1, h2 {
 p {
   font-size: 1.2em;
   margin-top: 20px;
+  color: #333;
 }
 
 footer {
   position: absolute;
   bottom: 10px;
   width: 100%;
-  font-size: 0.9em;
-  color: #777;
+  font-size: 0.8em;
+  color: #555;
 }
 
 .wave {
-  width: 80px;
+  width: 100px;
   animation: waveAnim 2s infinite alternate;
-}
-
-.sparkle::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('Glitter.mp4');
-  background-size: cover;
-  opacity: 0.4;
-  pointer-events: none;
+  display: block;
+  margin: 0 auto;
 }
 
 .characters {
@@ -56,12 +52,12 @@ footer {
   bottom: 40px;
   width: 100%;
   display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 30px;
 }
 
 .witch {
-  width: 80px;
+  width: 70px;
 }
 
 .cat {
@@ -69,13 +65,18 @@ footer {
   animation: walk 5s linear infinite;
 }
 
+.sparkle {
+  background: url("Glitter.gif") repeat;
+  background-size: cover;
+}
+
 @keyframes walk {
   0% { transform: translateX(0); }
-  50% { transform: translateX(50px); }
+  50% { transform: translateX(40px); }
   100% { transform: translateX(0); }
 }
 
 @keyframes waveAnim {
   from { transform: rotate(0deg); }
   to { transform: rotate(15deg); }
-  }
+}
