@@ -27,12 +27,12 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0.7);
-  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 30px 20px;
   border-radius: 20px;
   text-align: center;
-  width: 80%;
-  max-width: 600px;
+  width: 90%;
+  max-width: 500px;
   box-shadow: 0 0 20px rgba(0,0,0,0.2);
   opacity: 0;
   transition: opacity 1s ease;
@@ -47,11 +47,11 @@ body {
 /* Teks dan tombol */
 h1 {
   margin-bottom: 15px;
-  font-size: 2em;
+  font-size: 1.8em;
 }
 
 p {
-  font-size: 1.2em;
+  font-size: 1.1em;
   margin-bottom: 20px;
   line-height: 1.6;
 }
@@ -73,7 +73,7 @@ button:hover {
 /* Gambar animasi */
 .wave-hand, .witch, .cat {
   position: absolute;
-  width: 100px;
+  width: 80px;
   z-index: 2;
 }
 
@@ -120,4 +120,23 @@ footer {
   font-size: 0.9em;
   color: #444;
   z-index: 5;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .motivasi-box {
+    padding: 20px 15px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .wave-hand, .witch, .cat {
+    width: 60px;
+  }
   }
