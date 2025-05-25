@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Scrapbook Gyoona</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Musik -->
+  <audio autoplay loop>
+    <source src="Musik.mp3" type="audio/mpeg">
+    Browser tidak mendukung audio.
+  </audio>
+
+  <!-- Sparkle Effect (video lokal) -->
+  <video autoplay muted loop class="sparkle-bg">
+    <source src="Glitter.mp4" type="video/mp4">
+    Browser tidak mendukung video.
+  </video>
+
+  <!-- Gambar animasi -->
+  <img src="Hand.png" alt="Lambaian" class="wave-hand">
+  <img src="Witch.png" alt="Penyihir" class="witch">
+  <img src="Catti.png" alt="Kucing" class="cat">
+
+  <!-- Halaman konten -->
+  <div class="motivasi-box active" id="page1">
+    <h1>Hai Gyoona!</h1>
+    <p>Selamat datang di dunia kecil penuh semangat.</p>
+    <button onclick="nextPage()">Lanjut</button>
+  </div>
+
+  <div class="motivasi-box" id="page2">
+    <h1>Motivasi Ujian</h1>
+    <p>
+      Akhir semester emang kadang bikin capek,<br>
+      apalagi hari Senin yang bawa aura mager.<br>
+      Tapi aku yakin kamu bisa kok.<br>
+      Kamu udah usaha sejauh ini,<br>
+      jangan ragu sama kemampuanmu.
+    </p>
+    <button onclick="nextPage()">Lanjut</button>
+  </div>
+
+  <div class="motivasi-box" id="page3">
+    <h1>Pantun Semangat</h1>
+    <p>
+      Buka chat sambil senyum sendiri,<br>
+      Lihat namamu muncul di pagi hari.<br>
+      Semoga ujianmu lancar dan berseri,<br>
+      Ada hasil manis setelah lewati hari.
+    </p>
+    <button onclick="nextPage()">Lanjut</button>
+  </div>
+
+  <div class="motivasi-box" id="page4">
+    <h1>Afirmasi Diri</h1>
+    <p>
+      Saya sudah berusaha dengan sebaik mungkin.<br>
+      Saya layak untuk mendapatkan hasil yang baik.<br>
+      Saya percaya bahwa saya bisa menghadapi ujian ini<br>
+      dengan tenang dan percaya diri.<br>
+      Hari ini saya memilih untuk yakin, bukan panik.
+    </p>
+    <button onclick="restart()">Ulang dari Awal</button>
+  </div>
+
+  <footer>Editor: Hijrah</footer>
+
+  <script>
+    let currentPage = 1;
+    function nextPage() {
+      document.getElementById(`page${currentPage}`).classList.remove('active');
+      currentPage++;
+      document.getElementById(`page${currentPage}`).classList.add('active');
+    }
+    function restart() {
+      document.getElementById(`page${currentPage}`).classList.remove('active');
+      currentPage = 1;
+      document.getElementById("page1").classList.add('active');
+    }
+  </script>
+</body>
+  </html>
