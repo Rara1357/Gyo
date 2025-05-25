@@ -1,85 +1,69 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Scrapbook Gyoona</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- Musik -->
-  <audio autoplay loop>
-    <source src="Musik.mp3" type="audio/mpeg">
-    Browser tidak mendukung audio.
-  </audio>
-
-  <!-- Sparkle Effect (video lokal) -->
-  <video autoplay muted loop class="sparkle-bg">
-    <source src="Glitter.mp4" type="video/mp4">
-    Browser tidak mendukung video.
-  </video>
-
-  <!-- Gambar animasi -->
-  <img src="Hand.png" alt="Lambaian" class="wave-hand">
-  <img src="Witch.png" alt="Penyihir" class="witch">
-  <img src="Catti.png" alt="Kucing" class="cat">
-
-  <!-- Halaman konten -->
-  <div class="motivasi-box active" id="page1">
+  <!-- Halaman Pembuka -->
+  <section class="page sparkle" id="welcome">
+    <img src="Hand.png" class="wave" alt="Wave" />
     <h1>Hai Gyoona!</h1>
-    <p>Selamat datang di dunia kecil penuh semangat.</p>
-    <button onclick="nextPage()">Lanjut</button>
-  </div>
+    <p>Selamat datang di dunia semangat penuh sihir!</p>
+    <div class="characters">
+      <img src="Witch.png" class="witch" />
+      <img src="Catti.png" class="cat" />
+    </div>
+    <footer>Edited by: Hijrah</footer>
+  </section>
 
-  <div class="motivasi-box" id="page2">
-    <h1>Motivasi Ujian</h1>
+  <!-- Halaman Afirmasi -->
+  <section class="page">
+    <h2>Afirmasi Diri</h2>
     <p>
-      Akhir semester emang kadang bikin capek,<br>
-      apalagi hari Senin yang bawa aura mager.<br>
-      Tapi aku yakin kamu bisa kok.<br>
-      Kamu udah usaha sejauh ini,<br>
-      jangan ragu sama kemampuanmu.
+      “Saya sudah berusaha dengan sebaik mungkin. Saya layak untuk mendapatkan
+      hasil yang baik. Saya percaya bahwa saya bisa menghadapi ujian ini dengan
+      tenang dan percaya diri. Hari ini saya memilih untuk yakin, bukan panik.”
     </p>
-    <button onclick="nextPage()">Lanjut</button>
-  </div>
+    <div class="characters">
+      <img src="Witch.png" class="witch" />
+      <img src="Catti.png" class="cat" />
+    </div>
+    <footer>Edited by: Hijrah</footer>
+  </section>
 
-  <div class="motivasi-box" id="page3">
-    <h1>Pantun Semangat</h1>
+  <!-- Halaman Motivasi -->
+  <section class="page">
+    <h2>Motivasi</h2>
     <p>
-      Buka chat sambil senyum sendiri,<br>
-      Lihat namamu muncul di pagi hari.<br>
-      Semoga ujianmu lancar dan berseri,<br>
+      “Akhir semester emang kadang bikin capek, apalagi hari Senin yang bawa
+      aura mager. Tapi aku yakin kamu bisa kok. Kamu udah usaha sejauh ini,
+      jangan ragu sama kemampuanmu. Fokus aja, tarik napas… dan jalan
+      pelan-pelan.”
+    </p>
+    <div class="characters">
+      <img src="Witch.png" class="witch" />
+      <img src="Catti.png" class="cat" />
+    </div>
+    <footer>Edited by: Hijrah</footer>
+  </section>
+
+  <!-- Halaman Penutup -->
+  <section class="page">
+    <h2>Pantun Manis</h2>
+    <p>
+      Buka chat sambil senyum sendiri,<br />
+      Lihat namamu muncul di pagi hari.<br />
+      Semoga ujianmu lancar dan berseri,<br />
       Ada hasil manis setelah lewati hari.
     </p>
-    <button onclick="nextPage()">Lanjut</button>
-  </div>
-
-  <div class="motivasi-box" id="page4">
-    <h1>Afirmasi Diri</h1>
-    <p>
-      Saya sudah berusaha dengan sebaik mungkin.<br>
-      Saya layak untuk mendapatkan hasil yang baik.<br>
-      Saya percaya bahwa saya bisa menghadapi ujian ini<br>
-      dengan tenang dan percaya diri.<br>
-      Hari ini saya memilih untuk yakin, bukan panik.
-    </p>
-    <button onclick="restart()">Ulang dari Awal</button>
-  </div>
-
-  <footer>Editor: Hijrah</footer>
-
-  <script>
-    let currentPage = 1;
-    function nextPage() {
-      document.getElementById(`page${currentPage}`).classList.remove('active');
-      currentPage++;
-      document.getElementById(`page${currentPage}`).classList.add('active');
-    }
-    function restart() {
-      document.getElementById(`page${currentPage}`).classList.remove('active');
-      currentPage = 1;
-      document.getElementById("page1").classList.add('active');
-    }
-  </script>
+    <div class="characters">
+      <img src="Witch.png" class="witch" />
+      <img src="Catti.png" class="cat" />
+    </div>
+    <footer>Edited by: Hijrah</footer>
+  </section>
 </body>
-  </html>
+</html>
